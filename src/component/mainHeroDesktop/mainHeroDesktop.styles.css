@@ -1,0 +1,121 @@
+.main-hero-desktop {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  height: calc(100vh - var(--nav-mob-height));
+  padding-left: 2rem;
+  overflow: hidden;
+}
+/* ************************ */
+.main-hero-desktop .main-hero__header {
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .main-hero-desktop {
+    height: calc(100vh - var(--nav-des-height));
+  }
+}
+.main-hero-desktop__left {
+  display: flex;
+  align-items: center;
+  max-width: 601px;
+  margin: auto;
+}
+
+.main-hero-desktop__right {
+  position: relative;
+}
+/* TODO */
+/* .slide {
+  display: flex;
+  flex-direction: column;
+} */
+/* .slide img {
+  min-width: 100px;
+  min-height: 100px;
+} */
+.sliders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sliders::before {
+  position: absolute;
+  /* content: ''; */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.8)
+  );
+  z-index: 8;
+}
+.sliders img {
+  width: 100%;
+  display: block;
+}
+
+.slide-up {
+  animation: slide-up 80s linear infinite;
+}
+
+.slide-down {
+  animation: slide-down 80s linear infinite;
+  /* transform: translateY(-100%); */
+}
+.slide-down-fast {
+  animation: slide-down 40s linear infinite;
+  transform: translateY(-100%);
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+/* @keyframes slide-down {
+  100% {
+    transform: translateY(0%);
+  }
+} */
+@keyframes slide-up {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* ************** */
+
+.main-hero-desktop__phone-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.main-hero-desktop__phone-container .phone {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  z-index: 9;
+  animation: smoothSingleBounce 0.8s var(--transition-bounce) forwards;
+}
+
+@keyframes smoothSingleBounce {
+  70% {
+    top: 30%;
+  }
+  100% {
+    top: 35%;
+  }
+}

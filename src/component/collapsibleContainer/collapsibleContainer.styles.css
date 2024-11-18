@@ -1,0 +1,18 @@
+.collapsible-container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  transition: all 0.2s;
+
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.collapsible-container.expanded svg {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(180deg);
+}
+
+.collapsible-container svg {
+  width: 18px;
+  height: 18px;
+}

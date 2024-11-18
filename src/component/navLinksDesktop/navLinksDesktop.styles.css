@@ -1,0 +1,68 @@
+.nav-links-desktop {
+  list-style: none;
+  display: none;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+/*  */
+.nav-link-desktop:nth-last-child(-n + 2) {
+  padding: 1rem 1.5rem;
+}
+.nav-link-desktop .collapsible-container:hover {
+  background-color: #f1f1fe;
+}
+.nav-link-desktop .collapsible-container {
+  border-radius: 30px;
+}
+.nav-link-desktop:nth-child(-n + 3) {
+  border-radius: 30px;
+}
+
+.nav-link-desktop .collapsible-container svg {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link-desktop .collapsible-container:hover svg {
+  transform: rotate(180deg);
+}
+/* //////////////////////////////////////// /////////////////////////////////////////////*/
+.nav-link-desktop {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.36rem;
+  position: relative;
+  letter-spacing: -1px;
+}
+
+.nav-link-desktop a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.nav-link-desktop:nth-last-child(-n + 2) a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #6316db;
+  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 11;
+}
+
+.nav-link-desktop:nth-last-child(-n + 2) a:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link-desktop {
+    font-size: 1.8rem;
+  }
+}
+/* //////////////////////////////////////// /////////////////////////////////////////////*/

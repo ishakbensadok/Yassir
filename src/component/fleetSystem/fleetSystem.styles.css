@@ -1,0 +1,7 @@
+.fleet-system {
+  text-align: center;
+}
+
+.fleet-system__heading span {
+  color: var(--primary-color);
+}

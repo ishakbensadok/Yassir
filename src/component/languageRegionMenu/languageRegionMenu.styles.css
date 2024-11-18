@@ -1,0 +1,41 @@
+/* **************** FOR THE NAV DES INSTANCE **************** */
+.nav-links-desktop + .language-region-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav-links-desktop + .language-region-menu {
+    display: flex;
+  }
+}
+/* ******************************** */
+
+.language-region-menu {
+  display: flex;
+  gap: 1rem;
+}
+/* *********** DUE TO THE RIGHT EDGE OF THE VIEW********************* */
+.language-region-menu .region .animated-list {
+  left: -20px;
+}
+
+/* ******************************** */
+.language,
+.region {
+  position: relative;
+}
+.language-region-menu .btn {
+  background-color: #f1f1fe;
+  border: 0;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: all 0.2s;
+}
+.language-region-menu .btn:hover {
+  background-color: #e7e7f1;
+}

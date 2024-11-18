@@ -1,0 +1,127 @@
+.hero-section {
+  background-color: var(--background-dark-theme);
+  color: #fff;
+}
+
+.hero {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+
+  /* hak */
+  min-height: 303px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero__heading__highlighted {
+  color: var(--secondary-color);
+}
+.hero img {
+  border-radius: 30px;
+  object-fit: cover;
+}
+.hero__left {
+  /* width: 100%;
+  height: 100%; */
+  height: 450px;
+}
+.hero__right {
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  /* margin-left: 5px; */
+  padding: 1rem;
+}
+.tag-badge {
+  background-color: var(--background-circle);
+  border-radius: 30px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.3rem;
+  width: max-content;
+}
+
+.tag-badge svg {
+  color: var(--primary-color);
+  width: 18px;
+  height: 18px;
+}
+.tag-badge__text {
+  text-transform: uppercase;
+  color: var(--circle-color);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.hero__call-to-action {
+  display: flex;
+  gap: 2rem;
+}
+.hero__description {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 639px) {
+  .hero-section {
+    padding: 0;
+  }
+  .hero img {
+    border-radius: 0px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero__left {
+    height: auto;
+  }
+  .hero__right {
+    /* overide */
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    max-width: 610px;
+  }
+  .hero::before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .hero__description {
+    font-size: 2.2rem;
+  }
+
+  .tag-badge__text {
+    font-size: 1.6rem;
+  }
+  .tag-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero__right {
+    gap: 4rem;
+  }
+}

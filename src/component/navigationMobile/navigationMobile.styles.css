@@ -1,0 +1,28 @@
+.nav-mob {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 0;
+  z-index: 100;
+}
+
+.nav-mob .language-region-menu {
+  padding: 1rem 2rem;
+  gap: 1.5rem;
+}
+.nav-mob .language-region-menu .region {
+  order: -1;
+}
+
+.nav-mob .nav-link:nth-last-child(-n + 2):hover {
+  color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .nav-mob {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+.scroll-to-up {
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fb2576;
+  transform: rotate(-90deg);
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+
+.scroll-to-up:hover svg {
+  transform: translateX(5px);
+}
+.scroll-to-up svg {
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s var(--transition-bounce);
+}
+
+@media (min-width: 768px) {
+  .scroll-to-up {
+    width: 60px;
+    height: 60px;
+  }
+  .scroll-to-up svg {
+    width: 40px;
+    height: 40px;
+  }
+}

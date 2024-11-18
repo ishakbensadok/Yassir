@@ -1,0 +1,42 @@
+.call-to-action {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  border: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  width: max-content;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .call-to-action {
+    font-size: 1.6rem;
+    padding: 1.4rem 2.5rem;
+  }
+}
+.call-to-action.stretched {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.call-to-action:hover {
+  background-color: var(--primary-darker-color-on-hover);
+}
+.call-to-action.inverted {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  /* margin-top: 50px; */
+}
+
+.call-to-action.inverted:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}

@@ -1,0 +1,48 @@
+/* *********** ************** */
+
+.animated-list {
+  position: absolute;
+  left: 0px;
+  /* bottom: 0; */
+  background-color: #f1f1fe;
+  list-style: none;
+  width: max-content;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  z-index: 99;
+  cursor: auto;
+}
+
+@media (min-width: 1024px) {
+  .animated-list {
+    font-size: 1.6rem;
+  }
+}
+.animated-list__item {
+  padding: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
+.animated-list__item a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+.animated-list__item a::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #6316db;
+  transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 11;
+}
+
+.animated-list__item a:hover::before {
+  width: 100%;
+}

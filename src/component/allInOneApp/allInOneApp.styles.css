@@ -1,0 +1,111 @@
+.one-app {
+  background-color: var(--background-light);
+}
+
+.one-app__heading {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  text-align: center;
+  white-space: break-spaces;
+}
+.one-app__heading span {
+  color: var(--primary-color);
+}
+@media (min-width: 768px) {
+  .one-app__heading {
+    font-size: 6rem;
+  }
+}
+
+.one-app__details__title {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  font-weight: 1000;
+}
+.one-app__details__title span {
+  color: var(--primary-color);
+}
+@media (min-width: 768px) {
+  .one-app__details__title {
+    font-size: 5rem;
+  }
+}
+.one-app__body__details .call-to-action {
+  margin-top: 50px;
+}
+.one-app__body__phone {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+/* ********************* */
+/* .one-app__body__phone .phone {
+  margin: auto;
+} */
+/* ********************* */
+
+@media (min-width: 1024px) {
+  .one-app__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-items: end; */
+    gap: 4rem;
+  }
+  .one-app__body__phone {
+    order: 1;
+    height: auto;
+    overflow: visible;
+    justify-content: end;
+  }
+}
+.one-app__details__description {
+  font-size: 2.2rem;
+  color: var(--grey-dark-900);
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+.qr-code-container {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 0%;
+  transform: translate(-70%, -50%);
+  top: 50%;
+  z-index: 100;
+  display: none;
+}
+.qr-code-container .qr-code {
+  width: 100%;
+  height: 100%;
+}
+.qr-code-container .qr-code,
+.qr-code-container svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.qr-code-container svg {
+  width: 50px;
+  height: 50px;
+}
+.one-app__details__title__description-container {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .qr-code-container {
+    display: block;
+  }
+  .one-app__details__title__description-container {
+    display: block;
+  }
+  .download-btn {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,213 @@
+.phone {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  height: 650px;
+  background: rgb(52, 50, 50);
+  border-radius: 60px;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  /* margin: 0 10px; */
+  padding: 0.3rem;
+}
+
+/* *********** */
+.phone .call-to-action {
+  margin-top: 20px;
+  animation: beating-animation 0.8s ease alternate infinite;
+  padding: 1rem 2rem;
+}
+
+.phone .call-to-action:hover {
+  animation-play-state: paused;
+}
+
+@keyframes beating-animation {
+  100% {
+    transform: scale(0.95);
+  }
+}
+/* *********** */
+
+@media (min-width: 640px) {
+  .phone {
+    font-size: 1.5rem;
+  }
+  .phone .call-to-action {
+    font-size: 1.8rem;
+  }
+}
+.phone__camera {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 25px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 55;
+}
+
+.phone__content {
+  inset: 3px;
+  background: #fff;
+  border-radius: 60px;
+  border: 5px solid #000;
+  transition: 0.5s;
+  overflow: hidden;
+  height: 100%;
+}
+.phone__content img {
+  width: 100%;
+  display: block;
+}
+
+.phone__btn {
+  position: absolute;
+  top: 110px;
+  left: -2px;
+  width: 3px;
+  height: 26px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  z-index: 10;
+  background: radial-gradient(#ccc, #555, #222);
+}
+
+.phone__btn-left-1 {
+  top: 160px;
+  height: 40px;
+}
+.phone__btn-left-2 {
+  top: 220px;
+  height: 40px;
+}
+
+.phone__btn-right {
+  position: absolute;
+  top: 170px;
+  right: -2px;
+  width: 3px;
+  height: 30px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: radial-gradient(#ccc, #555, #222);
+  z-index: 10;
+}
+
+/* ********************************************** */
+
+.phone__content__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem;
+  font-size: 1.3rem;
+}
+
+.phone__content__header svg {
+  width: 60px;
+}
+.phone__content__header .curr-time {
+  font-weight: 700;
+}
+
+.phone__content__body {
+  padding: 3rem 2rem;
+  padding-bottom: 1rem;
+}
+.phone__content__body .brand {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.brand__logo {
+  background-color: var(--primary-color);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.brand__logo svg {
+  width: 50px;
+  padding: 0.5rem;
+  transform: scale(1.2);
+}
+
+.brand__name-container {
+  font-weight: 700;
+}
+/* .brand__full-name {
+  white-space: nowrap;
+} */
+.brand__name {
+  margin-top: 5px;
+  display: block;
+  color: var(--primary-color);
+}
+
+/* ** */
+
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.status-container::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background-color: #dfdfe0;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+}
+.status__bold {
+  /* display: flex; */
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.status__grey {
+  font-size: 1.2rem;
+  color: #5b576b;
+  font-weight: 300;
+}
+
+/*  */
+
+.preview {
+  margin-top: 20px;
+}
+.preview__label {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.preview__imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.preview__imgs img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*  */
+.phone__content__footer {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}

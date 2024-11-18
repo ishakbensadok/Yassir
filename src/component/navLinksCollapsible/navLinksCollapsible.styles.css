@@ -1,0 +1,16 @@
+.sub-nav-link {
+  margin-left: 15px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+.sub-nav-link:hover {
+  color: #6316db;
+}
+
+@media (min-width: 768px) {
+  .sub-nav-link {
+    font-size: 1.6rem;
+    margin-left: 0px;
+  }
+}

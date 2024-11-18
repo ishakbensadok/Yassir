@@ -1,0 +1,56 @@
+.banner-section {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.banner-container {
+  background-color: var(--grey-dark-900);
+  background-image: url('../../../public/banner.png');
+  background-repeat: no-repeat;
+  background-position: 102%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+.banner__title {
+  font-size: 2.6rem;
+}
+.banner__description {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.banner {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 2rem;
+  text-align: center;
+}
+.banner .call-to-action {
+  width: 100%;
+}
+.call-to-action-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    width: 400px;
+  }
+  .banner__title {
+    font-size: 2.8rem;
+  }
+  .banner__description {
+    font-size: 1.8rem;
+  }
+
+  .banner__link {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,124 @@
+.b2b-section {
+  color: #fff;
+}
+
+.b2b__img-container p {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-40%);
+  max-width: 100px;
+  font-weight: 1000;
+  line-height: 1.4;
+  z-index: 5;
+}
+
+.b2b > * {
+  border-radius: 20px;
+}
+.b2b img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.b2b__solutions {
+  background-color: var(--grey-dark-900);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 800px;
+  /* margin: auto; */
+}
+.b2b__solutions__rounded {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--background-circle);
+  width: max-content;
+  padding: 1rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.b2b__solutions__rounded p {
+  color: var(--circle-color);
+  font-weight: 800;
+}
+.b2b__solutions svg {
+  color: var(--primary-color);
+}
+.b2b__solutions__heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.b2b__solutions__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.b2b__solutions__detail .title {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.b2b__solutions__detail .description {
+  font-size: 1.4rem;
+}
+
+.b2b__img-container {
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  height: 350px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .b2b__solutions__details__link {
+    font-size: 1.5rem;
+  }
+  .b2b__img-container {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .b2b__solutions__rounded {
+    font-size: 1.5rem;
+  }
+
+  .b2b__solutions__detail .title {
+    font-size: 2rem;
+  }
+  .b2b__solutions__detail .description {
+    font-size: 1.8rem;
+  }
+  .b2b {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .b2b__img-container p {
+    font-size: 4rem;
+  }
+  .b2b__solutions__heading {
+    font-size: 4rem;
+  }
+  .b2b__solutions {
+    padding: 4rem 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .b2b__img-container p {
+    font-size: 5.5rem;
+  }
+}

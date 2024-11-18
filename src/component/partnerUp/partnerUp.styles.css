@@ -1,0 +1,133 @@
+.partner-up {
+  background-color: var(--background-gray);
+}
+
+.partner-up__heading {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  text-transform: capitalize;
+  letter-spacing: -3px;
+  text-align: center;
+}
+.partner-up__heading span {
+  color: var(--primary-color);
+}
+
+/*  */
+
+.partner-up__contents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.partner-up__contents-container .partner-up__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.partner-up__contents {
+  max-width: 650px;
+  margin: auto;
+}
+.partner-up__contents img {
+  text-align: center;
+}
+
+.partner-up__contents-container img {
+  width: 100%;
+  height: 300px;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: auto;
+}
+.partner-up__content {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 15px;
+}
+
+.circle {
+  border-radius: 30px;
+  margin-bottom: 20px;
+  background-color: var(--background-circle);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  width: max-content;
+}
+
+.circle svg {
+  color: var(--primary-color);
+  width: 18px;
+  height: 18px;
+}
+.circle__text {
+  text-transform: uppercase;
+  color: var(--circle-color);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.partner-up__content__heading {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 1000;
+  color: var(--grey-dark-900);
+}
+
+.partner-up__content__details {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100%;
+}
+
+.detail__heading {
+  color: var(--grey-dark-900);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.detail__description {
+  color: var(--description-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.partner-up .call-to-action {
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .partner-up__contents-container {
+    flex-direction: row;
+  }
+  .partner-up__contents-container img {
+    display: none;
+  }
+
+  .partner-up__heading {
+    font-size: 6rem;
+  }
+  .circle__text {
+    font-size: 1.8rem;
+  }
+  .partner-up__content__heading {
+    font-size: 3.5rem;
+  }
+  .detail__heading {
+    font-size: 1.8rem;
+  }
+  .detail__description {
+    font-size: 1.6rem;
+  }
+  .partner-up__content {
+    padding: 6rem;
+  }
+}

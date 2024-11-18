@@ -1,0 +1,40 @@
+.taps {
+  display: flex;
+  justify-content: center;
+  max-width: max-content;
+  flex-wrap: wrap;
+  margin: 5rem auto;
+  padding: 2rem;
+  border: 2px solid var(--primary-color);
+  gap: 1rem;
+  border-radius: 40px;
+  position: relative;
+}
+.tap {
+  border: 0;
+  padding: 1.2rem 1.8rem;
+  border-radius: 30px;
+  background: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.1s;
+  font-weight: 600;
+}
+
+.tap:not(.active):hover {
+  box-shadow: 0 0 1px 1px var(--primary-color);
+}
+
+.tap.active {
+  color: #fff;
+}
+
+.active-tap {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

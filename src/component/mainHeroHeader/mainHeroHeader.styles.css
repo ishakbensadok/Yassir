@@ -1,0 +1,26 @@
+.main-hero__header {
+  text-align: center;
+}
+.main-hero__title {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.main-hero__title__primary {
+  display: block;
+  color: var(--primary-color);
+}
+
+.main-hero__header .call-to-action {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .main-hero__title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-hero__title {
+    font-size: 6.5rem;
+  }
+}
+/* ************************ */
