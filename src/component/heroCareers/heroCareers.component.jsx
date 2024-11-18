@@ -15,7 +15,7 @@ function HeroCareers() {
       </p>
 
       <div className='hero__call-to-action'>
-        <CallToAction link='https://yassir.com/career/jobs'>
+        <CallToAction link='jobs' target=''>
           join them
         </CallToAction>
       </div>

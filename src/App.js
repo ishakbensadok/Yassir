@@ -10,6 +10,8 @@ import Business from './routes/business/business.component';
 
 import Careers from './routes/careers/careers.component';
 
+import Jobs from './routes/jobs/jobs.component';
+
 import Footer from './component/footer/footer.component';
 
 import NotFound from './component/notFound/notFound.component';
@@ -56,7 +58,8 @@ function App() {
       >
         <Route index element={<Home />} />
         <Route path='business' element={<Business />} />
-        <Route path='Career' element={<Careers />} />
+        <Route path='career' element={<Careers />} />
+        <Route path='career/jobs' element={<Jobs />} />
         <Route path='*' element={<HandleNotFound />} />
       </Route>
     </Routes>
