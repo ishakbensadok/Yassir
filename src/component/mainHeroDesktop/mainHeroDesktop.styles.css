@@ -68,11 +68,9 @@
 
 .slide-down {
   animation: slide-down 80s linear infinite;
-  /* transform: translateY(-100%); */
 }
 .slide-down-fast {
   animation: slide-down 40s linear infinite;
-  transform: translateY(-100%);
 }
 
 @keyframes slide-down {
@@ -84,11 +82,7 @@
     transform: translateY(0);
   }
 }
-/* @keyframes slide-down {
-  100% {
-    transform: translateY(0%);
-  }
-} */
+
 @keyframes slide-up {
   100% {
     transform: translateY(-100%);
