@@ -16,6 +16,8 @@ import NotFound from './component/notFound/notFound.component';
 
 import { ALL_NAV_LINKS } from './utils/navigationLinks.utils';
 
+import { useEffect } from 'react';
+
 function HandleNotFound() {
   const location = useLocation();
 
@@ -31,6 +33,15 @@ function HandleNotFound() {
 }
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [location]);
+
   return (
     <Routes>
       <Route
