@@ -27,14 +27,14 @@ function NavLinksCollapsible({ link }) {
           onClick={handleClick}
           className={isExpanded ? 'expanded' : ''}
         >
-          {link.name}
+          {link.label}
         </CollapsibleContainer>
 
         {isExpanded && (
           <ul>
-            {link.subLinks.map((n) => (
-              <li className='nav-link  sub-nav-link' key={n.id}>
-                <Link to={`/${n.name.replaceAll(' ', '-')}`}>{n.name}</Link>
+            {link.subLinks.map((l) => (
+              <li className='nav-link  sub-nav-link' key={l.id}>
+                <Link to={`${l.url}`}>{l.label}</Link>
               </li>
             ))}
           </ul>

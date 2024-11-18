@@ -13,7 +13,7 @@ function NavLinks({ collabsibleLinks = [], inlineLink = [] }) {
 
       {inlineLink.map((link) => (
         <li className='nav-link' key={link.id}>
-          <Link to={`/${link.name.replaceAll(' ', '-')}`}> {link.name}</Link>
+          <Link to={`${link.url}`}> {link.label}</Link>
         </li>
       ))}
     </ul>

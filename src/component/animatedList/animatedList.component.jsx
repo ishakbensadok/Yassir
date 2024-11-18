@@ -29,7 +29,7 @@ function AnimatedList({ state, list, slide = 'up' }) {
         <animated.ul className='animated-list' style={style}>
           {list.map((l) => (
             <li className='animated-list__item' key={l.id}>
-              <Link to={`/${l.name.replaceAll(' ', '-')}`}>{l.name}</Link>
+              <Link to={`${l.url}`}>{l.label}</Link>
             </li>
           ))}
         </animated.ul>

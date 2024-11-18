@@ -44,8 +44,8 @@ function App() {
         }
       >
         <Route index element={<Home />} />
-        <Route path='Business' element={<Business />} />
-        <Route path='Careers' element={<Careers />} />
+        <Route path='business' element={<Business />} />
+        <Route path='Career' element={<Careers />} />
         <Route path='*' element={<HandleNotFound />} />
       </Route>
     </Routes>

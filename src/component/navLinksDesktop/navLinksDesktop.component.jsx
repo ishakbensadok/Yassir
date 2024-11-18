@@ -19,7 +19,7 @@ function NavLinksDesktop() {
 
       {INLINE_LINKS_ARRAY.map((link) => (
         <li className='nav-link-desktop' key={link.id}>
-          <Link to={`/${link.name.replaceAll(' ', '-')}`}>{link.name}</Link>
+          <Link to={`${link.url}`}>{link.label}</Link>
         </li>
       ))}
       {/* ************************* */}

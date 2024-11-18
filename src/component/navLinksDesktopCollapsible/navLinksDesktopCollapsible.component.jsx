@@ -12,7 +12,7 @@ function NavLinksDesktopCollapsible({ link }) {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <CollapsibleContainer>{link.name}</CollapsibleContainer>
+      <CollapsibleContainer>{link.label}</CollapsibleContainer>
 
       <AnimatedList state={isHover} list={link.subLinks} />
     </li>

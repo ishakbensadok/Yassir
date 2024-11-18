@@ -7,33 +7,44 @@ import { ReactComponent as TunisiaSvg } from '../assets/TunisiaIcon.svg';
 export const COLLABSIBLE_NAV_LINKS_ARRAY = [
   {
     id: crypto.randomUUID(),
-    name: 'services',
+    label: 'services',
     subLinks: [
-      { id: crypto.randomUUID(), name: 'Yassir Ride' },
-      { id: crypto.randomUUID(), name: 'Yassir Fode' },
-      { id: crypto.randomUUID(), name: 'Yassir Grocery' },
-      { id: crypto.randomUUID(), name: 'Order For Someone Else' },
+      { id: crypto.randomUUID(), label: 'Yassir Ride', url: 'ride-hailing' },
+      { id: crypto.randomUUID(), label: 'Yassir Fode', url: 'food-delivery' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Yassir Grocery',
+        url: 'grocery-delivery',
+      },
+      {
+        id: crypto.randomUUID(),
+        label: 'Order For Someone Else',
+        url: 'order-for-someone-else',
+      },
     ],
   },
   {
     id: crypto.randomUUID(),
-    name: 'Partners',
+    label: 'Partners',
     subLinks: [
-      { id: crypto.randomUUID(), name: 'Drivers' },
-      { id: crypto.randomUUID(), name: 'Delivery Drivers' },
-      { id: crypto.randomUUID(), name: 'Yassir Agent' },
-      { id: crypto.randomUUID(), name: 'Restaurants' },
-      { id: crypto.randomUUID(), name: 'Stores' },
+      { id: crypto.randomUUID(), label: 'Drivers', url: 'drivers' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Delivery Drivers',
+        url: 'delivery-men',
+      },
+      { id: crypto.randomUUID(), label: 'Restaurants', url: 'restaurant' },
+      { id: crypto.randomUUID(), label: 'Stores', url: 'stores' },
     ],
   },
   {
     id: crypto.randomUUID(),
-    name: 'About Us',
+    label: 'About Us',
 
     subLinks: [
-      { id: crypto.randomUUID(), name: 'About Us' },
-      { id: crypto.randomUUID(), name: 'FQA' },
-      { id: crypto.randomUUID(), name: 'News' },
+      { id: crypto.randomUUID(), label: 'About Us', url: 'about-us' },
+      { id: crypto.randomUUID(), label: 'FQA', url: 'faq' },
+      { id: crypto.randomUUID(), label: 'News', url: 'news' },
     ],
   },
 ];
@@ -41,62 +52,72 @@ export const COLLABSIBLE_NAV_LINKS_ARRAY = [
 export const INLINE_LINKS_ARRAY = [
   {
     id: crypto.randomUUID(),
-    name: 'Business',
+    label: 'Business',
+    url: 'business',
   },
   {
     id: crypto.randomUUID(),
-    name: 'Careers',
+    label: 'Careers',
+    url: 'career',
   },
 ];
 
 export const ALL_NAV_LINKS = [
   ...COLLABSIBLE_NAV_LINKS_ARRAY.flatMap((link) => link.subLinks).map(
-    (subLink) => subLink.name.replace(/\s+/g, '-')
+    (subLink) => subLink.url
   ),
-  ...INLINE_LINKS_ARRAY.map((link) => link.name.replace(/\s+/g, '-')),
+  ...INLINE_LINKS_ARRAY.map((link) => link.url),
 ];
 
 export const LANGUAGES_ARRAY = [
   {
     id: crypto.randomUUID(),
-    name: 'English',
+    label: 'English',
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: 'Français',
+    label: 'Français',
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: 'عربي',
+    label: 'عربي',
+    url: '/',
   },
 ];
 
-const addIcon = ({ name, svg }) => (
+const addIcon = ({ label, svg }) => (
   <div style={{ display: 'flex', gap: '1rem' }}>
     {svg}
-    <p>{name} </p>
+    <p>{label} </p>
   </div>
 );
 
 export const REGIONS_ARRAY = [
   {
     id: crypto.randomUUID(),
-    name: addIcon({ name: 'Algeria', svg: <AlgeriaSvg /> }),
+    label: addIcon({ label: 'Algeria', svg: <AlgeriaSvg /> }),
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: addIcon({ name: 'Morocco', svg: <MoroccoSvg /> }),
+    label: addIcon({ label: 'Morocco', svg: <MoroccoSvg /> }),
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: addIcon({ name: 'S.Africa', svg: <SAfricaSvg /> }),
+    label: addIcon({ label: 'S.Africa', svg: <SAfricaSvg /> }),
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: addIcon({ name: 'Senegal', svg: <SenegalSvg /> }),
+    label: addIcon({ label: 'Senegal', svg: <SenegalSvg /> }),
+    url: '/',
   },
   {
     id: crypto.randomUUID(),
-    name: addIcon({ name: 'Tunisia', svg: <TunisiaSvg /> }),
+    label: addIcon({ label: 'Tunisia', svg: <TunisiaSvg /> }),
+    url: '/',
   },
 ];

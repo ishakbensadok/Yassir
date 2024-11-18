@@ -1,45 +1,63 @@
 export const COLLABSIBLE_FOOTER_LINKS_ARRAY = [
   {
     id: crypto.randomUUID(),
-    name: 'Our services',
+    label: 'Our services',
     subLinks: [
-      { id: crypto.randomUUID(), name: 'Yassir Ride' },
-      { id: crypto.randomUUID(), name: 'Yassir Fode' },
-      { id: crypto.randomUUID(), name: 'Yassir Grocery' },
-      { id: crypto.randomUUID(), name: 'Yassir B2B' },
-      { id: crypto.randomUUID(), name: 'Order For Someone Else' },
+      { id: crypto.randomUUID(), label: 'Yassir Ride', url: 'ride-hailing' },
+      { id: crypto.randomUUID(), label: 'Yassir Fode', url: 'food-delivery' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Yassir Grocery',
+        url: 'grocery-delivery',
+      },
+      { id: crypto.randomUUID(), label: 'Yassir B2B', url: 'business' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Order For Someone Else',
+        url: 'order-for-someone-else',
+      },
     ],
   },
   {
     id: crypto.randomUUID(),
-    name: 'Our partners',
+    label: 'Our partners',
     subLinks: [
-      { id: crypto.randomUUID(), name: 'Drivers' },
-      { id: crypto.randomUUID(), name: 'Delivery Drivers' },
-      { id: crypto.randomUUID(), name: 'Yassir Agent' },
-      { id: crypto.randomUUID(), name: 'Restaurants' },
-      { id: crypto.randomUUID(), name: 'Stores' },
+      { id: crypto.randomUUID(), label: 'Drivers', url: 'drivers' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Delivery Drivers',
+        url: 'delivery-men',
+      },
+      { id: crypto.randomUUID(), label: 'Restaurants', url: 'restaurant' },
+      { id: crypto.randomUUID(), label: 'Stores', url: 'stores' },
     ],
   },
   {
     id: crypto.randomUUID(),
-    name: 'Company',
+    label: 'Company',
 
     subLinks: [
-      { id: crypto.randomUUID(), name: 'About Us' },
-      { id: crypto.randomUUID(), name: 'Careers' },
-      { id: crypto.randomUUID(), name: 'News' },
-      { id: crypto.randomUUID(), name: 'Support' },
+      { id: crypto.randomUUID(), label: 'About Us', url: 'about-us' },
+      { id: crypto.randomUUID(), label: 'Careers', url: 'career' },
+      { id: crypto.randomUUID(), label: 'News', url: 'news' },
     ],
   },
   {
     id: crypto.randomUUID(),
-    name: 'Work with us',
+    label: 'Work with us',
 
     subLinks: [
-      { id: crypto.randomUUID(), name: 'Become a Partner' },
-      { id: crypto.randomUUID(), name: 'Become a Delivery Driver' },
-      { id: crypto.randomUUID(), name: 'Become a Driver' },
+      {
+        id: crypto.randomUUID(),
+        label: 'Become a Partner',
+        url: 'https://express.yassir.io/restaurant/registration',
+      },
+      {
+        id: crypto.randomUUID(),
+        label: 'Become a Delivery Driver',
+        url: 'delivery-men',
+      },
+      { id: crypto.randomUUID(), label: 'Become a Driver', url: 'drivers' },
     ],
   },
 ];
