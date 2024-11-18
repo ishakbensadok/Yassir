@@ -39,6 +39,7 @@
 @media (min-width: 1024px) {
   .nav-des {
     height: var(--nav-des-height);
+    padding: 0 2rem;
   }
 }
 
