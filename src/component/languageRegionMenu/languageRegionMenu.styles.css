@@ -15,9 +15,8 @@
 }
 /* *********** DUE TO THE RIGHT EDGE OF THE VIEW********************* */
 .language-region-menu .region .animated-list {
-  left: -20px;
+  left: -50%;
 }
-
 /* ******************************** */
 .language,
 .region {
