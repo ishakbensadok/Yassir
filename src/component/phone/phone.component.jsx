@@ -70,9 +70,9 @@ const Phone = ({ content, children }) => {
                 <p className='preview__label'>preview</p>
 
                 <div className='preview__imgs'>
-                  <LazyLoading src='phone-image-en-1.webp' />
-                  <LazyLoading src='phone-image-en-2.webp' />
-                  <LazyLoading src='phone-image-en-3.webp' />
+                  <img src='phone-image-en-1.webp' alt='' />
+                  <img src='phone-image-en-2.webp' alt='' />
+                  <img src='phone-image-en-3.webp' alt='' />
                 </div>
               </div>
             </div>
@@ -81,7 +81,6 @@ const Phone = ({ content, children }) => {
             </footer>
           </>
         ) : (
-          // <img src={content} alt='' />
           <LazyLoading src={content} />
         )}
       </div>

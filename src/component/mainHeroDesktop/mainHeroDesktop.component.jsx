@@ -5,7 +5,6 @@ import { IMAGES_PER_SLIDE_TYPE_DESKTOP } from '../../utils/sliderImages.utils';
 import Phone from '../phone/phone.component';
 import MainHeroHeader from '../mainHeroHeader/mainHeroHeader.component';
 
-import LazyLoading from '../lazyLoading/lazyLoading.component';
 function Slider({ type = 'slide-down' }) {
   const images = IMAGES_PER_SLIDE_TYPE_DESKTOP.find(
     (i) => i.type === type
@@ -16,8 +15,7 @@ function Slider({ type = 'slide-down' }) {
       {Array.from({ length: images.length }, (_, i) => (
         <div className={`slide ${type}`} key={`${images.at(i)}`}>
           {Array.from({ length: images.length }, (_, i) => (
-            // <img src={`${images.at(i)}`} alt='' key={`${images.at(i)}`} />
-            <LazyLoading src={`${images.at(i)}`} key={`${images.at(i)}`} />
+            <img src={`${images.at(i)}`} alt='' key={`${images.at(i)}`} />
           ))}
         </div>
       ))}

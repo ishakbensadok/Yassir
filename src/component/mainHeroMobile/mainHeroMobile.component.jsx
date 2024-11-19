@@ -2,7 +2,6 @@ import { IMAGES_SLIDE_MOBILE } from '../../utils/sliderImages.utils';
 
 import Phone from '../phone/phone.component';
 import MainHeroHeader from '../mainHeroHeader/mainHeroHeader.component';
-import LazyLoading from '../lazyLoading/lazyLoading.component';
 import './mainHeroMobile.styles.css';
 
 function Slider() {
@@ -10,7 +9,7 @@ function Slider() {
     <div className='slider-mobile'>
       {IMAGES_SLIDE_MOBILE.map((src) => (
         <div className='slider-mobile__wrapper' key={src}>
-          <LazyLoading src={src} />
+          <img src={src} alt='' />
         </div>
       ))}
     </div>

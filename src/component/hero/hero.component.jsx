@@ -1,7 +1,5 @@
 import Section from '../section/section.compnent';
 
-import LazyLoading from '../lazyLoading/lazyLoading.component';
-
 import './hero.styles.css';
 
 function Hero({ heroImgUrl, order = 1, children }) {
@@ -9,7 +7,7 @@ function Hero({ heroImgUrl, order = 1, children }) {
     <Section className='hero-section'>
       <div className='hero'>
         <div className='hero__left'>
-          <LazyLoading src={heroImgUrl} />
+          <img src={heroImgUrl} alt='' />
         </div>
         <div className='hero__right' style={{ order: order }}>
           {children}
