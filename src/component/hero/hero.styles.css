@@ -7,9 +7,6 @@
   display: grid;
   gap: 2rem;
   position: relative;
-
-  /* hak */
-  min-height: 303px;
 }
 .hero::before {
   content: '';
@@ -33,7 +30,7 @@
   display: block;
 }
 .hero__left {
-  height: 450px;
+  height: calc(100vh - var(--nav-mob-height));
 }
 .hero__right {
   max-width: 410px;
@@ -92,9 +89,7 @@
   .hero {
     grid-template-columns: repeat(2, 1fr);
   }
-  .hero__left {
-    height: auto;
-  }
+
   .hero__right {
     /* overide */
     position: relative;
@@ -123,5 +118,8 @@
 @media (min-width: 1024px) {
   .hero__right {
     gap: 4rem;
+  }
+  .hero__left {
+    height: calc(100vh - var(--nav-des-height));
   }
 }
