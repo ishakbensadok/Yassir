@@ -1,0 +1,132 @@
+.teams-section {
+  background-color: var(--background-primary-purple);
+  color: #fff;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 20rem);
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 8rem;
+  margin-top: 12rem;
+}
+
+.member__info {
+  position: absolute;
+  top: 0%;
+  width: max-content;
+  z-index: 11;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 0.5rem;
+  transition: all 0.4s var(--transition-bounce);
+  transform: translate(-50%, -105%);
+}
+
+.member:nth-child(odd) .member__info {
+  left: 100%;
+}
+.member:nth-child(even) .member__info {
+  left: 50%;
+}
+
+.member__info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.member__info p {
+  max-width: 130px;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.members img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member:nth-child(even) {
+  align-self: end;
+}
+
+.member {
+  border-radius: 50%;
+  width: 11.5rem;
+  height: 11.5rem;
+  position: relative;
+}
+@media (min-width: 640px) {
+  .members {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 25rem);
+  }
+  .member {
+    width: 13rem;
+    height: 13rem;
+  }
+  .member__info h3 {
+    font-size: 1.8rem;
+  }
+  .member__info p {
+    font-size: 1.4rem;
+  }
+  .member__info {
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .member:first-child .member__info,
+  .member:hover .member__info {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .member {
+    cursor: pointer;
+  }
+  .member:first-child {
+    cursor: auto;
+  }
+  .member::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  .member:hover::before,
+  .member:first-child::before {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1024px) {
+  .members {
+    grid-template-rows: repeat(2, 30rem);
+  }
+  .member__info h3 {
+    font-size: 2rem;
+  }
+  .member__info p {
+    font-size: 1.4rem;
+    max-width: max-content;
+  }
+  .member {
+    width: 20rem;
+    height: 20rem;
+  }
+  .member__info {
+    padding: 1rem;
+  }
+}
