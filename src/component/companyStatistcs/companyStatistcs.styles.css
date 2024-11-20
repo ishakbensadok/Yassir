@@ -1,0 +1,75 @@
+.company-statistcs-section {
+  background-color: var(--background-gray);
+}
+
+.company-statistcs__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.statistics__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+  gap: 2rem;
+}
+.statistics__info__item {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+.statistics__info__item__svg-container svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary-color);
+}
+.statistics__info__item__svg-container {
+  background-color: var(--background-circle);
+  border-radius: 20px;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics__info__item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statistics__info__item p {
+  font-weight: 700;
+  color: var(--grey-dark-900);
+  font-size: 1.6rem;
+}
+
+.statistics__info__item h4 {
+  font-weight: 300;
+  color: var(--description-color);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .statistics__info__item p {
+    font-size: 1.8rem;
+  }
+  .statistics__info__item h4 {
+    font-size: 1.6rem;
+  }
+  .statistics__info__item__svg-container svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .statistics__info__item__svg-container {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .statistics__info__item {
+    padding: 3rem;
+  }
+}

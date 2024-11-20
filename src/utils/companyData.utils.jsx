@@ -1,3 +1,7 @@
+import { ReactComponent as EmployeesSvg } from '../assets/Employees.svg';
+import { ReactComponent as FlagSvg } from '../assets/flagIcon.svg';
+import { ReactComponent as GlobalSvg } from '../assets/globalIcon.svg';
+
 export const COMPANY__MEMBERS = [
   {
     id: crypto.randomUUID(),
@@ -46,5 +50,27 @@ export const COMPANY__MEMBERS = [
     name: 'Zineb Mezidi',
     position: 'UX researcher',
     image: 'Zineb-Mezidi.webp',
+  },
+];
+
+export const COMPANY__STATISTICS = [
+  {
+    id: crypto.randomUUID(),
+    title: 'Employees',
+    value: 4500,
+    svg: <EmployeesSvg />,
+  },
+
+  {
+    id: crypto.randomUUID(),
+    title: 'Countries',
+    value: 42,
+    svg: <FlagSvg />,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Nationalities',
+    value: 25,
+    svg: <GlobalSvg />,
   },
 ];

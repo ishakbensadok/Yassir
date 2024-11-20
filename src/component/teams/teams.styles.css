@@ -15,7 +15,7 @@
 
 .member__info {
   position: absolute;
-  top: 0%;
+  top: -0.4rem;
   width: max-content;
   z-index: 11;
   text-align: center;
@@ -24,6 +24,7 @@
   padding: 0.5rem;
   transition: all 0.4s var(--transition-bounce);
   transform: translate(-50%, -105%);
+  z-index: 1;
 }
 
 .member:nth-child(odd) .member__info {
@@ -62,7 +63,9 @@
   width: 11.5rem;
   height: 11.5rem;
   position: relative;
+  box-shadow: 0 0 0.1rem 0.4rem #fff;
 }
+
 @media (min-width: 640px) {
   .members {
     grid-template-columns: repeat(4, 1fr);
@@ -85,7 +88,7 @@
   }
   .member:first-child .member__info,
   .member:hover .member__info {
-    top: 0;
+    top: -0.4rem;
     opacity: 1;
     visibility: visible;
   }
@@ -128,5 +131,14 @@
   }
   .member__info {
     padding: 1rem;
+  }
+}
+@media (min-width: 1350px) {
+  .members {
+    grid-template-rows: repeat(2, 35rem);
+  }
+  .member {
+    width: 25rem;
+    height: 25rem;
   }
 }

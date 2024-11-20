@@ -11,6 +11,7 @@
 
 .language-region-menu {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 /* *********** DUE TO THE RIGHT EDGE OF THE VIEW********************* */
