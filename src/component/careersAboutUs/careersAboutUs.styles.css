@@ -1,0 +1,223 @@
+.careers-about-us-section {
+  background-color: var(--grey-dark-900);
+  color: #fff;
+}
+
+.careers-about-us__title {
+  color: var(--secondary-color);
+  line-height: 1;
+}
+
+.tag {
+  border-radius: 30px;
+  background-color: var(--background-circle);
+  color: var(--circle-color);
+  width: max-content;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.2rem;
+}
+
+.core-principles {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.principles {
+  display: grid;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+.core-principle {
+  position: relative;
+}
+.core-principle::before,
+.core-principle:after {
+  box-sizing: border-box;
+  border: 0.4rem solid var(--secondary-color);
+  position: absolute;
+}
+
+.core-principle-1 {
+  padding-top: 5rem;
+}
+.principle {
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 230px;
+}
+.principle.hidden {
+  display: none;
+}
+
+/* ***************************************************************************** */
+
+.core-principle-1::before {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-left: 0;
+  border-bottom: 0;
+  border-top-right-radius: 8rem;
+}
+.core-principle-1::after {
+  bottom: -15rem;
+  left: 50%;
+  width: 25%;
+  height: 15rem;
+  border-right: 0;
+  border-top: 0;
+  border-bottom-left-radius: 8rem;
+}
+/* ***************************************************************************** */
+
+.core-principle-2::before {
+  top: -5.4rem;
+  right: 15%;
+  width: 25%;
+  height: 15.4rem;
+  border-left: 0;
+  border-bottom: 0;
+  border-top-right-radius: 8rem;
+}
+.core-principle-2::after {
+  bottom: -15rem;
+  right: 15%;
+  width: 25%;
+  height: 15rem;
+  border-top: 0;
+  border-left: 0;
+  border-bottom-right-radius: 8rem;
+}
+/* ***************************************************************************** */
+.core-principle-3::before {
+  top: -5.4rem;
+  left: 50%;
+  width: 25%;
+  height: 15.4rem;
+  border-right: 0;
+  border-bottom: 0;
+  border-top-left-radius: 8rem;
+}
+.core-principle-3::after {
+  bottom: -15rem;
+  left: 50%;
+  width: 25%;
+  height: 15rem;
+  border-top: 0;
+  border-right: 0;
+  border-bottom-left-radius: 8rem;
+}
+/* ***************************************************************************** */
+.core-principle-4::before {
+  top: -5.4rem;
+  right: 15%;
+  width: 25%;
+  height: 15.4rem;
+  border-left: 0;
+  border-bottom: 0;
+  border-top-right-radius: 8rem;
+  box-sizing: border-box;
+}
+
+/* ***************************************************************************** */
+.check-svg-container {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.core-values {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.core-value {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.core-value svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary-color);
+}
+
+.principle--highlighted {
+  border: 2px solid var(--secondary-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  justify-content: center;
+}
+.principle__title {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.principle__text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.img-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .core-principle::before,
+  .core-principle:not(:last-child):after {
+    content: '';
+  }
+  .core-principle-1 {
+    padding-top: 25rem;
+  }
+  .principle.hidden {
+    display: block;
+  }
+  .principles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .core-principles {
+    gap: 20rem;
+  }
+  .principle__title {
+    font-size: 2rem;
+  }
+  .principle__text {
+    font-size: 1.6rem;
+  }
+  .tag {
+    font-size: 1.6rem;
+    height: 5rem;
+    padding: 0 1.5rem;
+    margin-bottom: 5rem;
+  }
+}
