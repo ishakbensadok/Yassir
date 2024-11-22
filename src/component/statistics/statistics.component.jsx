@@ -32,7 +32,11 @@ function StatisticsItem({ statistic }) {
     requestAnimationFrame(animateCount);
   };
 
-  const { ref } = useIntersectionObserver(callback);
+  const { ref } = useIntersectionObserver(callback, {
+    root: null,
+    rootMargin: '-200px',
+    threshold: 0,
+  });
 
   return (
     <div className='statistics__item' ref={ref}>
