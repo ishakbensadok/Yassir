@@ -42,13 +42,22 @@ function StatisticsItem({ statistic }) {
   );
 }
 
-function Statistics() {
+function Statistics({ imageSrc = null, className = '' }) {
   return (
-    <Section className='statistics-section'>
+    <Section className={`statistics-section ${className}`}>
       <div className='statistics'>
-        <picture className='statistics__image'>
-          <LazyLoading src='numbers-image.webp' />
-        </picture>
+        {imageSrc ? (
+          <picture className='statistics__image'>
+            <LazyLoading src={imageSrc} />
+          </picture>
+        ) : (
+          <header className='statistics__header'>
+            <h2 className='statistics__heading'>
+              Yassir is growing fast. <span>Super fast.</span>
+            </h2>
+            <img src='metrics.webp' alt='' />
+          </header>
+        )}
         <div className='statistics__items'>
           {STATISTICS_ITEMS.map((s) => (
             <StatisticsItem statistic={s} key={s.id} />

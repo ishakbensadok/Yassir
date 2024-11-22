@@ -19,7 +19,7 @@ function Business() {
       <FleetSystem />
       <Features />
       <Customers />
-      <Statistics />
+      <Statistics className='grey-dark' imageSrc='numbers-image.webp' />
       <Banner
         title='Yassir for business'
         description='Click the button bellow to use our tailored solutions and grow your business'
