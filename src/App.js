@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import NavigationDesktop from './component/navigationDesktop/navigationDesktop.component';
 
@@ -18,8 +19,6 @@ import NotFound from './component/notFound/notFound.component';
 
 import { ALL_NAV_LINKS } from './utils/navigationLinks.utils';
 
-import { useEffect } from 'react';
-
 function HandleNotFound() {
   const location = useLocation();
 
@@ -34,7 +33,7 @@ function HandleNotFound() {
   );
 }
 
-function App() {
+function AppWrapper() {
   const location = useLocation();
 
   useEffect(() => {
@@ -45,17 +44,18 @@ function App() {
   }, [location]);
 
   return (
+    <div className='app-wrapper'>
+      <NavigationDesktop />
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+}
+
+function App() {
+  return (
     <Routes>
-      <Route
-        path='/'
-        element={
-          <>
-            <NavigationDesktop />
-            <Footer />
-            <ScrollToTop />
-          </>
-        }
-      >
+      <Route path='/' element={<AppWrapper />}>
         <Route index element={<Home />} />
         <Route path='business' element={<Business />} />
         <Route path='career' element={<Careers />} />

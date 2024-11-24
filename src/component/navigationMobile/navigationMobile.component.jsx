@@ -1,6 +1,5 @@
-import './navigationMobile.styles.css';
-
 import LanguageRegionMenu from '../languageRegionMenu/languageRegionMenu.component';
+
 import NavLinks from '../navLinks/navLinks.component';
 
 import {
@@ -8,6 +7,7 @@ import {
   INLINE_LINKS_ARRAY,
 } from '../../utils/navigationLinks.utils';
 
+import './navigationMobile.styles.css';
 function NavigationMobile() {
   return (
     <nav className='nav-mob'>

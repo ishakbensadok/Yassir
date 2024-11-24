@@ -1,16 +1,12 @@
 /* *********** ************** */
 
 .animated-list {
-  position: absolute;
-  left: 0px;
-  /* bottom: 0; */
   background-color: #f1f1fe;
   list-style: none;
   width: max-content;
   padding: 1rem;
   border-radius: 5px;
   font-size: 1.3rem;
-  z-index: 99;
   cursor: auto;
 }
 

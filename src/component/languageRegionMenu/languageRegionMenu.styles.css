@@ -15,8 +15,8 @@
   gap: 1rem;
 }
 /* *********** DUE TO THE RIGHT EDGE OF THE VIEW********************* */
-.language-region-menu .region .animated-list {
-  left: -50%;
+.language-region-menu .region .animated {
+  left: -50% !important;
 }
 /* ******************************** */
 .language,

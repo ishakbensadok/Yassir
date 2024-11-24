@@ -1,15 +1,19 @@
-import './languageRegionMenu.styles.css';
+import { useState } from 'react';
+
 import { ReactComponent as LanguagesSvg } from '../../assets/languagesIcon.svg';
+
 import { ReactComponent as GlobalSvg } from '../../assets/globalIcon.svg';
 
-import AnimatedList from '../animatedList/animatedList.component';
+import Animation from '../animation/animation.component';
 
 import {
   LANGUAGES_ARRAY,
   REGIONS_ARRAY,
 } from '../../utils/navigationLinks.utils';
-import { useState } from 'react';
 
+import AnimatedList from '../animatedList/animatedList.compnent';
+
+import './languageRegionMenu.styles.css';
 function LanguageRegionMenu({ slide = 'up' }) {
   const [activeList, setActiveList] = useState(null); // Track which list is active
 
@@ -23,22 +27,18 @@ function LanguageRegionMenu({ slide = 'up' }) {
           <LanguagesSvg />
           <p>English</p>
         </button>
-        <AnimatedList
-          state={activeList === 'language'}
-          list={LANGUAGES_ARRAY}
-          slide={slide}
-        />
+        <Animation state={activeList === 'language'} slide={slide}>
+          <AnimatedList list={LANGUAGES_ARRAY} />
+        </Animation>
       </div>
       <div className='region' onClick={() => toggleList('region')}>
         <button className='btn'>
           <GlobalSvg />
           <p>Global</p>
         </button>
-        <AnimatedList
-          state={activeList === 'region'}
-          list={REGIONS_ARRAY}
-          slide={slide}
-        />
+        <Animation state={activeList === 'region'} slide={slide}>
+          <AnimatedList list={REGIONS_ARRAY} />
+        </Animation>
       </div>
     </div>
   );

@@ -1,7 +1,10 @@
 import { useState } from 'react';
 
-import AnimatedList from '../animatedList/animatedList.component';
+import Animation from '../animation/animation.component';
+
 import CollapsibleContainer from '../collapsibleContainer/collapsibleContainer.component';
+
+import AnimatedList from '../animatedList/animatedList.compnent';
 
 function NavLinksDesktopCollapsible({ link }) {
   const [isHover, setIsHover] = useState(false);
@@ -14,7 +17,9 @@ function NavLinksDesktopCollapsible({ link }) {
     >
       <CollapsibleContainer>{link.label}</CollapsibleContainer>
 
-      <AnimatedList state={isHover} list={link.subLinks} />
+      <Animation state={isHover} slide='up'>
+        <AnimatedList list={link.subLinks} />
+      </Animation>
     </li>
   );
 }
