@@ -39,7 +39,7 @@ function NavigationDesktop() {
 
           <LanguageRegionMenu />
 
-          <Animation state={isMenuExtended} slide='up' end={100}>
+          <Animation state={isMenuExtended} slide='up' end={0}>
             <NavigationMobile />
           </Animation>
         </nav>
